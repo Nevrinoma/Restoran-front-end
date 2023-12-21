@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menüü - Teie Restoran</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <script src="../js/confirmLogout.js"></script> -->
+    <script src="../js/menu.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="../index.html"><img src="../Images/logo.png" alt="Logo"></a>
+            <ul id="navMenu">
+                <a href="pages/menu.html">Menü</a>
+            </ul>
+    </nav>
+</header>
+<main class="main">
+   
+    <div class="menu-container">
+        <h2>Lisa toit:</h2>
+        <form id="addDishForm">
+            <input type="text" id="dishName" placeholder="Название блюда" required>
+            <input type="text" id="dishType" placeholder="main/appetizer/drink" required>
+            <input type="number" id="dishPrice" placeholder="Цена" required>
+            <input type="text" id="dishAllergens" placeholder="Аллергены">
+            <button type="submit">Добавить блюдо</button>
+        </form>
+        <section id="menuItems">
+            
+        </section>
+    </div>
+    <div id="updateDishModal" style="display: none;">
+        <h2>Uuenda toit:</h2>
+        <form id="updateDishForm">
+            <input type="hidden" id="updateDishId">
+            <input type="text" id="updateDishName" placeholder="Название блюда" required>
+            <input type="text" id="updateDishType" placeholder="main/appetizer/drink" required>
+            <input type="number" id="updateDishPrice" placeholder="Цена" required>
+            <input type="text" id="updateDishAllergens" placeholder="Аллергены">
+            <button type="submit">Обновить блюдо</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>© 2023 Taste of Pain. Kõik õigused kaitstud.</p>
+    <p>Kontakt: <a href="mailto:contact@yourrestaurant.com">giuliano.lember@tasteofpain.com</a></p>
+</footer>
+</body>
+</html>

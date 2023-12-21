@@ -1,0 +1,403 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color:white;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #4b583a; 
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c0c0c0; 
+}
+
+
+nav a img {
+    height: 70px;
+}
+
+
+#restaurant-photo {
+    width: 100%;
+    height: 620px;
+    display: block;
+}
+
+
+#dashboard {
+    padding: 20px;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+.dashboard-item {
+    margin-bottom: 15px;
+}
+
+
+#quickAccess {
+    padding: 20px;
+    text-align: center;
+}
+
+#quickAccess button {
+    background-color: #4b583a; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#quickAccess button:hover {
+    background-color: #5c6a4b; 
+}
+
+
+#notifications {
+    padding: 20px;
+    background-color: #e0e0e0; 
+    text-align: center;
+}
+
+
+footer {
+    background-color: #4b583a; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; 
+    width: 100%;
+}
+
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #c0c0c0; 
+}
+
+footer a:hover {
+    color: white;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.add-dish-form {
+    flex: 1;
+    margin: 10px;
+}
+
+.add-dish-form {
+    width: 30%;
+    height: 30%;
+    margin: 1rem auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.add-dish-form form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+}
+
+.add-dish-form input,
+.add-dish-form button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.add-dish-form button {
+    background-color: #4b583a; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+select,input {
+    padding: 10px;
+    margin: 10px 0;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+}
+
+
+select option {
+    padding: 10px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4b583a; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+select:disabled {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.staff-table th, 
+.staff-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.staff-table th {
+    background-color: #4b583a;
+    color: white;
+}
+
+.staff-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.staff-table tr:hover {
+    background-color: #ddd;
+}
+
+.staff-table .edit-btn, 
+.staff-table .delete-btn {
+    background-color: #4b583a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.staff-table .edit-btn:hover,
+.staff-table .delete-btn:hover {
+    background-color: #5c6a4b;
+}
+
+
+.main, .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-container {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.order-constructor {
+    flex: 0 0 350px; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.order-constructor form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-constructor label {
+    margin-top: 10px;
+}
+
+.order-constructor select, .order-constructor input[type="text"], 
+.order-constructor input[type="number"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.order-constructor input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.order-constructor input[type="number"] {
+    width: 50px; 
+}
+
+.order-constructor input[type="submit"] {
+    background-color: #4b583a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-constructor input[type="submit"]:hover {
+    background-color: #5c6a4b;
+}
+
+.tables-container, .newTable-form {
+    flex: 1;
+    margin: 10px;
+}
+
+.newTable-form {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.newTable-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newTable-form input, .newTable-form button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.newTable-form button {
+    background-color: #4b583a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between; 
+}
+ .active-orders, .completed-orders{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font: 1em sans-serif;
+    
+}
+.table{
+    background-color: white;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font: 1em sans-serif;
+    
+}
+
+.order{
+    background-color: rgba(0,0,0,0.05);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font: 1em sans-serif;
+}
