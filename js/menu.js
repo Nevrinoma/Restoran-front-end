@@ -11,7 +11,7 @@ function fetchMenuItems() {
         .then(data => {
             displayMenuItems(data);
         })
-        .catch(error => console.error('Ошибка при загрузке меню:', error));
+        .catch(error => console.error('Viga menüü laadimisel:', error));
 }
 
 function displayMenuItems(data) {
@@ -25,8 +25,8 @@ function displayMenuItems(data) {
         itemDiv.innerHTML = `
             <h3>${item.name}</h3>
             <p>Tüüp: ${item["@attributes"].type}</p> 
-            <p>Цена: ${item.price}€</p>
-            <p>Аллергены: ${item.allergyTags}</p>
+            <p>Hind: ${item.price}€</p>
+            <p>Allergeenid: ${item.allergyTags}</p>
         `;
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Kustuta';
@@ -49,14 +49,14 @@ function deleteDish(dishId) {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Ошибка при удалении блюда');
+            throw new Error('Viga toitu kustutamisel');
         }
         return response.json();
     })
     .then(() => {
         fetchMenuItems(); 
     })
-    .catch(error => console.error('Ошибка при удалении блюда:', error));
+    .catch(error => console.error('Viga toitu kustutamisel:', error));
 }
 
 
@@ -80,7 +80,7 @@ function addDish(event) {
         document.getElementById('addDishForm').reset();
         fetchMenuItems();
     })
-    .catch(error => console.error('Ошибка при добавлении блюда:', error));
+    .catch(error => console.error('Viga toitu lisamisel:', error));
 }
 
 function updateDish(event) {
@@ -110,7 +110,7 @@ function updateDish(event) {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Блюдо не найдено');
+            throw new Error('Toit ei leitud');
         }
         return response.json();
     })
@@ -118,7 +118,7 @@ function updateDish(event) {
         document.getElementById('updateDishModal').style.display = 'none';
         fetchMenuItems();
     })
-    .catch(error => console.error('Ошибка при обновлении блюда:', error));
+    .catch(error => console.error('Viga toitu uuendamisel:', error));
 }
 
 function showUpdateForm(item) {
